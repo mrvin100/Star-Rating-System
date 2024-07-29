@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* custom css file made by JeanDoe */
+
+/* import Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* css variables */
+
+:root{
+	--main-clr: #567;
+/*	--light-bg: #e1d1f1;*/
+	--light-bg: #f1e1d1;
+	--light-clr: #7a7b7c;
+	--black: #1a1b1c;
+	--white: #fff;
+	
+	--body-font: 'Poppins','Ubuntu Mono', sans-serif;
+}
+
+/* initialisation */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	font-weight: normal;
+}
+
+html{
+	font-size: 100%;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
+	background: var(--light-bg);
+	font-family: var(--body-font);
+}
+
+/* rating section starts */
+
+.rating{
+	background: var(--white);
+	padding: 1rem;
+	border-radius: .25rem;
+}
+
+.rating .profile{
+	margin-bottom: 1rem;
+}
+.rating .profile img{
+	display: inline-block;
+	height: 5rem;
+	width: 5rem;
+	border-radius: 50%;
+	margin-right: 1rem;
+	vertical-align: top;
+}
+.rating .profile p{
+	display: inline-block;
+	background: #f1f2f2;
+	vertical-align: top;
+	padding: .5rem 1rem;
+	border-radius: .25rem;
+	font-size: .938rem;
+	font-weight: 300;
+	color: var(--black);
+	letter-spacing: .02rem;
+	max-width: 20rem;
+	position: relative;
+}
+.rating .profile p span{
+	color: var(--main-clr);
+}
+.rating .profile p::before{
+	content: '';
+	height: 1.5rem;
+	width: 2.4rem;
+	background: #f1f2f2;
+	position: absolute;
+	left: -2rem;
+	top: .5rem;
+	clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
+	border-radius: .25rem;
+}
+
+.rating h2{
+	font-size: 1.3rem;
+	color: var(--black);
+	font-weight: normal;
+	text-align: center;
+	letter-spacing: .02rem;
+}
+
+
+.rating .stars{
+	font-size: 1.2rem;
+	color: var(--light-clr);
+	font-weight: normal;
+	text-align: center;
+	letter-spacing: .02rem;
+	margin-top: 2rem;
+}
+
+.rating .stars i{
+	cursor: pointer;
+}
+
+.rating .stars i:hover{
+	color: var(--main-clr);
+}
+
+.stars i.active{
+	color: #f84;
+}
+
+
+@media screen and (max-width: 480px){
+	
+	.rating{
+		margin: 1rem;
+	}
+	.rating .profile img{
+		display: block;
+		margin: 0 auto;
+	}
+	.rating .profile p{
+		margin: 1rem auto 0;
+	}
+	.rating h2{
+		font-size: 1rem;
+	}
+	.rating .profile p::before{
+		width: 1.5rem;
+		height: 2.4rem;
+		top: -2rem;
+		left: .5rem;
+		clip-path: polygon(100% 100%, 100% 50%, 0% 100%);
+	}
+	.rating .stars{
+		margin-top: 1rem;
+	}
+}
+
+
+
+
+
+
+
